@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+
     <title>Document</title>
 </head>
+
 <body>
-    <input id="cep">
-    <button type="button" onclick="ConsultaCEP()">CEP</button>
-    <p id="cepp"></p>
-    <p id="logradouro"></p>
-    <p id="localidade"></p>
-    <p id="uf"></p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Digite o CEP" aria-label="Search" id="cep">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="ConsultaCEP()">Buscar</button>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container ccep" style="margin-top: 20px;">
+        <div class="row">
+            <h3>CEP</h3>
+
+        </div>
+        <div class="row">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Logradouro</td>
+                        <td id="logradouro"></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro</td>
+                        <td id="bairro"></td>
+                    </tr>
+                    <tr>
+                        <td>Localidade</td>
+                        <td id="localidade"></td>
+                    </tr>
+                    <td>UF</td>
+                    <td id="uf"></td>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>

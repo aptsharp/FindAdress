@@ -7,10 +7,15 @@ function ConsultaCEP() {
         type: "GET",
         success: function(Response){
             console.log(Response);
-            document.getElementById("cepp").innerHTML = Response.cep;
-            document.getElementById("uf").innerHTML = Response.uf;
-            document.getElementById("localidade").innerHTML = Response.localidade;
-            document.getElementById("bairro").innerHTML = Response.bairro;
+            $("#logradouro").html(Response.logradouro);
+            $("#bairro").html(Response.bairro);
+            $("#localidade").html(Response.localidade);
+            $("#uf").html(Response.uf);
+            $(".ccep").show();
         }
     })    
 }
+//para esconder os resultados null
+$(function(){
+    $(".ccep").hide();
+});
